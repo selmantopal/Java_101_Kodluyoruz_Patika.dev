@@ -219,3 +219,61 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
               }
        }
 
+Ödev HesapMakinesi:
+       
+       import java.util.Scanner;
+
+
+       class Main {
+              public static void main(String[] args) {
+    
+                     int sayi1, sayi2, sonuc;
+                     char islem;
+
+                     System.out.println("\t-----HESAP MAKİNESİ-----\n\n");
+
+                     Scanner s = new Scanner(System.in);
+                     System.out.print("Lütfen birinci sayıyı giriniz :");
+                     sayi1=s.nextInt();
+
+                     System.out.print("Lütfen ikinci sayıyı giriniz :");
+                     sayi2=s.nextInt();
+
+                     System.out.println("+ (TOPLAMA) :");
+                     System.out.println("- (ÇIKARMA) :");
+                     System.out.println("* (ÇARPMA) :");
+                     System.out.println("/ (BÖLME) :");
+                     System.out.println("Lütfen yapmak istediğiniz işlem için ilgili sayıyı seçiniz :");
+
+                     islem = s.next().charAt(0);
+
+                     switch(islem){
+
+                            case '+':
+                              sonuc = sayi1 + sayi2;
+                              System.out.print("Toplama sonucu = " + sonuc);
+                              break;
+                            case '-':
+                              sonuc = sayi1 - sayi2;
+                              System.out.println("Çıkarma sonucu = " + sonuc);
+                              break;
+                            case '*':
+                              sonuc = sayi1 * sayi2;
+                              System.out.println("Çarpma sonucu = " + sonuc);
+                              break;
+                            case '/':
+                              if(sayi2==0){
+                                   System.out.println("Hiçbir sayı 0'a bölünemez !");
+                              }
+                              else{
+                                   sonuc = sayi1 / sayi2;
+                                   System.out.println("Bölme sonucu = " + sonuc);
+                                   break;
+                              }
+                            default:
+                                   System.out.println("Lütfen +, -, * veya / işlemlerinden birini seçiniz...");
+                                   break;
+                            }
+
+                    }
+       }
