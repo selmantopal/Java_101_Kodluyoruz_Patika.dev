@@ -264,6 +264,7 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
                             case '/':
                               if(sayi2==0){
                                    System.out.println("Hiçbir sayı 0'a bölünemez !");
+                                   break;
                               }
                               else{
                                    sonuc = sayi1 / sayi2;
