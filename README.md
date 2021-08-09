@@ -110,3 +110,25 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
         }  
     }
 
+Ödev #4 Kod:
+
+
+       import java.util.Scanner;
+
+
+       class Main {
+              public static void main(String[] args) {
+
+                     double km, katSayi=2.2, minUcret=20, acilisUcret=10, toplamUcret, odenecekUcret;  
+
+                     Scanner inp = new Scanner(System.in);
+                     System.out.println("Gidilmiş olan km mesafesini giriniz :");
+                     km = inp.nextDouble(); 
+
+                     toplamUcret = acilisUcret + (km*katSayi); 
+                     boolean kosul = toplamUcret <20;
+                     odenecekUcret = kosul ? minUcret : toplamUcret;
+
+                     System.out.println("Taksimetre Tutarı :"+ " " + odenecekUcret + "  "+"TL'dir.");
+              }
+       }
