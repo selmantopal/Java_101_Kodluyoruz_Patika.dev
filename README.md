@@ -34,4 +34,35 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
             System.out.println(kaldiMİ);
         }
      }
+     
+Ödev #2 Kod:
+      
+      import java.util.Scanner;
+
+      public class KdvHesaplama {
+      
+         public static void main(String[] args) {
+        
+
+            double fiyat, kdv, kdvli, kdv1 = 0.18, kdv2= 0.08;
+
+            Scanner input = new Scanner(System.in);
+            System.out.print("Fiyat giriniz :");
+            fiyat = input.nextDouble();
+
+
+            boolean kosul1 = fiyat >= 0;
+            boolean kosul2 = fiyat <= 1000;
+            boolean sonuc = kosul1 && kosul2;
+
+            System.out.println("KDV'siz Fiyat :" + fiyat);
+
+            kdv= sonuc ? kdv1 : kdv2;
+            kdvli = fiyat + (fiyat * kdv);
+
+            System.out.println("KDV'li Fiyat :" + kdvli);
+            System.out.println("KDV Tutarı :" + kdv);
+         
+        }
+    }
 
