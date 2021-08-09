@@ -132,3 +132,35 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
                      System.out.println("Taksimetre Tutarı :"+ " " + odenecekUcret + "  "+"TL'dir.");
               }
        }
+       
+       
+Ödev #5 Kod:
+ 
+       import java.util.Scanner;
+
+       class Main {
+       
+              public static void main(String[] args) {
+              
+                     int r;
+                     double pi = 3.14, alan, cevre;
+
+                     Scanner inp = new Scanner(System.in);
+                     System.out.println("Yarıçapı giriniz :");
+                     r = inp.nextInt();
+
+                     alan= pi*r*r;
+                     System.out.println("Dairenin Alanı : " + alan + "cm\u00B2");
+
+                     cevre= 2*pi*r;
+                     System.out.println("Dairenin Çevresi : " + cevre + "cm");
+
+                     double merkezAci, daireDilimAlan;
+                     System.out.print("Dairenin merkez açısını giriniz : ");
+                     merkezAci = inp.nextDouble();
+
+      
+                     daireDilimAlan=(pi*(r*r)*merkezAci)/360;
+                     System.out.println("Daire diliminin alanı : " + daireDilimAlan + "cm\u00B2");
+              }
+       } 
