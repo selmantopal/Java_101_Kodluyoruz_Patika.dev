@@ -32,8 +32,8 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
 
             String kaldiMİ = (ortalama<60) ? "Sınıfta Kaldı!" : "Sınıfı Geçti.";
             System.out.println(kaldiMİ);
-        }
-     }
+          }
+       }
      
 Ödev #2 Kod:
       
