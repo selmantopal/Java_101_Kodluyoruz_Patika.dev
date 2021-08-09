@@ -278,3 +278,54 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
 
                     }
        }
+       
+       
+       
+Ödev KullanıcıGirişi:
+
+       import java.util.Scanner;
+
+       class Main {
+              public static void main(String[] args) {
+
+                     String username, password;
+                     char sifreCevap;
+
+                     Scanner s = new Scanner(System.in);
+                     System.out.print("Lütfen kullanıcı adınızı giriniz : ");
+                     username = s.nextLine();
+
+                     System.out.print("Lütfen şifrenizi giriniz : ");
+                     password = s.nextLine();
+
+                     if (username.equals("admin")) {
+                            if (password.equals("1234")) {
+                                   System.out.println("Sisteme başarılı bir şekilde giriş yaptınız.");
+                            } else {
+                                   System.out.println("Hatalı şifre girişi !!!");
+                                   System.out.print("Şifrenizi sıfırlamak ister misiniz? E/H : ");
+                                   sifreCevap = s.next().charAt(0);
+
+                                   if (sifreCevap == 'E') {
+
+                                          System.out.print("Lütfen yeni şifrenizi giriniz: ");
+                                          String newPassword = s.next();
+
+                                          if (newPassword.equals(password) || newPassword.equals("dev")) {
+                                                 System.out.print("Şifre oluşturulamadı, lütfen başka şifre giriniz.");
+                                          } else {
+                                                 System.out.print("Şifre oluşturuldu.");
+                                          }
+                                   } else if (sifreCevap == 'H') {
+                                          System.out.print("Şifre oluşturma işlemi iptal edildi..");
+
+                            } else {
+                                   System.out.print("Lütfen geçerli bir parametre giriniz. E (Evet) veya H (Hayır) !!!");
+                         }
+                      }
+           } else {
+               System.out.println("Hatalı kullanıcı adı girişi !!!");
+           }
+         }
+       }
+
