@@ -389,3 +389,36 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
           }
        }
     }
+    
+    
+Ödev HavaSicakligi:
+
+       import java.util.Scanner;
+
+       class Main {
+              public static void main(String[] args) {
+                     int havaSicakligi;
+
+                     Scanner s = new Scanner(System.in);
+                     System.out.println("Lütfen bugünkü hava sıcaklığını giriniz : ");
+                     havaSicakligi=s.nextInt();
+
+                     if(havaSicakligi<5){
+                            System.out.println("Bugün için en iyisi kayak yapmak :)");
+                     }
+                     else if(havaSicakligi<=25){
+                            if(havaSicakligi<=15){
+                                   System.out.println("Hmm belki sinema iyi bir fikir olabilir");
+                            }
+                            if(havaSicakligi>=10){
+                                   System.out.println("Ailecek bir pikniğe ne dersin ?");
+                            }
+                     }
+                     else{
+                            System.out.println("Sanırım bu sıcakta denize yüzmeye gitmekten başka bir şey gelmedi aklına :)");
+                     }
+
+                 }
+             }
+    
+
