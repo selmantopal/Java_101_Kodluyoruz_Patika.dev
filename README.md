@@ -329,3 +329,63 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
          }
        }
 
+
+Ödev SınıfıGeçme:
+
+       import java.util.Scanner;
+
+       class Main {
+       public static void main(String[] args) {
+              int mat, fiz, tur, kim, muz, dersSayisi=5;
+              double ortalama;
+
+              Scanner s = new Scanner(System.in);
+              System.out.println("Matematik ders notunu giriniz :");
+              mat = s.nextInt();
+              System.out.println("Fizik ders notunu giriniz :");
+              fiz = s.nextInt();
+              System.out.println("Türkçe ders notunu giriniz :");
+              tur = s.nextInt();
+              System.out.println("Kimya ders notunu giriniz :");
+              kim = s.nextInt();
+              System.out.println("Müzik ders notunu giriniz :");
+              muz = s.nextInt();
+
+
+              if(mat<0||mat>100){
+                     mat= 0;
+                     dersSayisi--;
+              }
+              if (fiz < 0 || fiz > 100) {
+                      fiz = 0;
+                     dersSayisi--;
+              }
+
+              if (tur < 0 || tur > 100) {
+                     tur = 0;
+                     dersSayisi--;
+              }
+
+              if (kim < 0 || kim > 100) {
+                     kim = 0;
+                     dersSayisi--;
+              }
+
+              if (muz < 0 || muz > 100) {
+                     muz = 0;
+                     dersSayisi--;
+              }
+
+      
+              ortalama = (mat + fiz + tur + kim + muz)/dersSayisi;
+
+              if (ortalama >= 55 && ortalama <= 100) {
+                 if(ortalama>90){
+                     System.out.println("Tebrikler başarılı bir dönem geçirerek sınıfı geçtiniz :)"+ " Ortalamanız :"+" "+ ortalama);
+                 }else
+                     System.out.print("Sınıfı Geçtiniz . Ortalamanız : " + ortalama);
+              } else if (ortalama < 55 && ortalama >= 0) {
+                     System.out.print("Sınıfta Kaldınız ! Ortalamanız : " + ortalama);
+          }
+       }
+    }
