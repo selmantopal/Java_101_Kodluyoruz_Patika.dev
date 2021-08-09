@@ -65,4 +65,47 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
          
         }
     }
+    
+Ödev #3 Kod:
+
+    import java.util.Scanner;
+
+    class Main {
+        public static void main(String[] args) {
+        
+            double kenar1, kenar2, hipotenus;
+
+            Scanner inp = new Scanner(System.in);
+            System.out.print("Üçgenin birinci kenar uzunluğunu giriniz :");
+            kenar1= inp.nextDouble();
+            System.out.print("Üçgenin birinci kenar uzunluğunu giriniz :");
+            kenar2= inp.nextDouble();
+      
+            hipotenus = Math.sqrt ((kenar1*kenar1)+(kenar2*kenar2));
+
+            System.out.println("Üçgenin hipotenüs uzunluğu : "+" "+ hipotenus);
+
+
+            double a, b, c;
+
+            System.out.println("Alan hesaplama ----------");
+
+            System.out.print("Üçgenin 1. kenarını giriniz :");
+            a = inp.nextInt();
+
+            System.out.print("Üçgenin 2. kenarını giriniz :");
+            b = inp.nextInt();
+
+            System.out.print("Üçgenin 3. kenarını giriniz :");
+            c = inp.nextInt();
+
+            double alan, u;
+
+            u=(a+b+c)/2;
+            alan = Math.sqrt (u*(u-a)*(u-b)*(u-c));
+
+            System.out.print("Üçgenin alanı :" + alan);
+
+        }  
+    }
 
