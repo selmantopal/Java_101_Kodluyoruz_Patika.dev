@@ -8,7 +8,7 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
 
        public class NotOrtalamasi {
 
-        public static void main(String[] args) {
+          public static void main(String[] args) {
   
             int mat, fiz, kim, tur, tar, muz;
     
