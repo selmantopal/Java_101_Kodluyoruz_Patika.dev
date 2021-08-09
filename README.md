@@ -4,7 +4,7 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
 
 Ödev #1 Kod:
 
-    import java.util.Scanner;
+       import java.util.Scanner;
 
        public class NotOrtalamasi {
 
@@ -67,6 +67,7 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
     }
     
 Ödev #3 Kod:
+
 
     import java.util.Scanner;
 
