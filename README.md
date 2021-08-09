@@ -164,3 +164,25 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
                      System.out.println("Daire diliminin alanı : " + daireDilimAlan + "cm\u00B2");
               }
        } 
+       
+       
+Ödev #6 Kod:
+
+       import java.util.Scanner;
+
+       class Main {
+              public static void main(String[] args) {
+
+                     double boy, kilo, indeks;
+
+                     Scanner i = new Scanner(System.in);
+                     System.out.println("Lütfen boyunuzu(metre cinsinde) giriniz : ");
+                     boy=i.nextDouble();
+
+                     System.out.println("Lütfen kilonuzu giriniz : ");
+                     kilo=i.nextDouble();
+
+                     indeks = kilo/(boy*boy);
+                     System.out.println("Vücut Kitle İndeksiniz : " + indeks);
+              }
+       }
