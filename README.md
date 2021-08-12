@@ -497,4 +497,60 @@ Kodluyoruz ile öğrenmeye başladığım Java için açmış olduğum repo.
                      System.out.println("Burcunuz:"+" " +burc);
               }
        }
+       
+       
+Ödev UcakBileti:
+
+       import java.util.Scanner;
+       import java.text.DecimalFormat;
+
+       class Main {
+              public static void main(String[] args) {
+                     double km, yasi, mUcret = 0.10, tutar, yasIndirimi = 0, yonIndirimi, ilkTutar, sonTutar;
+                     int yolculukTipi;
+
+                     Scanner s = new Scanner(System.in);
+                     DecimalFormat df = new DecimalFormat("#.##");
+
+                     System.out.print("Mesafeyi km türünden giriniz : ");
+                     km = s.nextInt();
+
+                     System.out.print("Yaşınızı giriniz : ");
+                     yasi = s.nextInt();
+
+                     System.out.print("Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ): ");
+                     yolculukTipi = s.nextInt();
+
+                     tutar = km * mUcret;
+
+                     if (yasi < 12) {
+                            yasIndirimi = tutar * 0.50;
+                     } else if (yasi >= 12 && yasi <= 24) {
+                            yasIndirimi = tutar * 0.10;
+                     } else if (yasi >= 65) {
+                            yasIndirimi = tutar * 0.30;
+                     }
+
+                     ilkTutar = tutar - yasIndirimi;
+
+                     switch (yolculukTipi) {
+                            case 1:
+                                   yonIndirimi = ilkTutar * 0;
+                                   sonTutar = ilkTutar - yonIndirimi;
+                                   System.out.print("\nToplam Tutar = " + df.format(sonTutar) + " TL");
+                                   break;
+
+                            case 2:
+                                   yonIndirimi = ilkTutar * 0.20;
+                                   sonTutar = ilkTutar - yonIndirimi;
+                                   sonTutar = sonTutar * 2;
+                                   System.out.print("\nToplam Tutar = " + df.format(sonTutar) + " TL");
+                                   break;
+
+                            default:
+                                   System.out.println("\nHatalı Veri Girdiniz !");
+                                   break;
+                            }
+                     }
+              }
 
